@@ -1,0 +1,5 @@
+import {env} from 'cloudflare:workers';
+async function setup(){const db=env.DB;await db.batch([db.prepare('CREATE TABLE IF NOT EXISTS comments (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, message TEXT NOT NULL, created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP)'),db.prepare('CREATE INDEX IF NOT EXISTS idx_comments_created_at ON comments(created_at DESC)')]);return db}
+async function list(){const db=await setup();const r=await db.prepare('SELECT id, name, message, created_at AS createdAt FROM comments ORDER BY id DESC LIMIT 20').all();return r.results||[]}
+export async function GET(){return Response.json({comments:await list()})}
+export async function POST(req:Request){const b=await req.json().catch(()=>({}));const name=String(b.name||'').trim().slice(0,24);const message=String(b.message||'').trim().slice(0,180);if(!name||!message)return Response.json({error:'お名前とメッセージを入力してください。'},{status:400});const db=await setup();await db.prepare('INSERT INTO comments (name, message) VALUES (?, ?)').bind(name,message).run();return Response.json({comments:await list()})}
