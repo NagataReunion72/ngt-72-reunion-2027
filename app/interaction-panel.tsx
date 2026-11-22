@@ -1,10 +1,49 @@
 'use client';
-import {FormEvent,useEffect,useState} from 'react';
-type Comment={id:number;name:string;message:string;createdAt:string};
-type Votes=Record<string,number>;
-const choices=[['unchanged','いちばん変わってなさそうな人'],['glowup','いちばん雰囲気が変わっていそうな人'],['traveler','いちばん遠くから来てくれそうな人']];
-export default function InteractionPanel(){const [votes,setVotes]=useState<Votes>({});const [comments,setComments]=useState<Comment[]>([]);const [choice,setChoice]=useState('unchanged');const [name,setName]=useState('');const [message,setMessage]=useState('');const [notice,setNotice]=useState('');const [busy,setBusy]=useState(false);
-useEffect(()=>{Promise.all([fetch('/api/votes').then(r=>r.json()),fetch('/api/comments').then(r=>r.json())]).then(([v,c])=>{setVotes(v.votes||{});setComments(c.comments||[])}).catch(()=>setNotice('読み込みに失敗しました。少し待ってお試しください。'))},[]);
-async function vote(){setBusy(true);setNotice('');try{const r=await fetch('/api/votes',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({choice})});const d=await r.json();if(!r.ok)throw new Error(d.error);setVotes(d.votes);setNotice('投票ありがとう！結果に反映しました。')}catch(e){setNotice(e instanceof Error?e.message:'投票できませんでした。')}finally{setBusy(false)}}
-async function comment(e:FormEvent){e.preventDefault();setBusy(true);setNotice('');try{const r=await fetch('/api/comments',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({name,message})});const d=await r.json();if(!r.ok)throw new Error(d.error);setComments(d.comments);setName('');setMessage('');setNotice('メッセージを投稿しました！')}catch(e){setNotice(e instanceof Error?e.message:'投稿できませんでした。')}finally{setBusy(false)}}
-return <div className="interaction-grid"><section className="vote-card"><div className="card-kicker"><span>VOTE</span><b>01</b></div><h3>勝手にアワード</h3><p>今回投票するテーマを選んでください。</p><fieldset>{choices.map(([value,label])=><label key={value}><input type="radio" name="award" value={value} checked={choice===value} onChange={()=>setChoice(value)}/><span>{label}</span><b>{votes[value]||0}票</b></label>)}</fieldset><button onClick={vote} disabled={busy}>このテーマに投票する <span>→</span></button></section><section className="comment-card"><div className="card-kicker"><span>MESSAGE</span><b>02</b></div><h3>みんなへ、ひとこと</h3><form onSubmit={comment}><label>お名前・ニックネーム<input value={name} onChange={e=>setName(e.target.value)} maxLength={24} placeholder="例：3組 たなか" required/></label><label>メッセージ<textarea value={message} onChange={e=>setMessage(e.target.value)} maxLength={180} placeholder="当日楽しみにしています！" required/></label><button disabled={busy}>メッセージを投稿する <span>→</span></button></form><div className="comment-feed" aria-live="polite">{comments.slice(0,4).map(c=><blockquote key={c.id}><p>“{c.message}”</p><cite>{c.name}</cite></blockquote>)}</div></section>{notice&&<p className="form-notice" role="status">{notice}</p>}</div>}
+
+const choices = [
+  'いちばん変わってなさそうな人',
+  'いちばん雰囲気が変わっていそうな人',
+  'いちばん遠くから来てくれそうな人',
+];
+
+export default function InteractionPanel() {
+  return (
+    <div className="interaction-grid">
+      <p className="migration-banner" role="status">
+        投票・コメント機能は新しい公開環境へ移行準備中です。受付開始まで少しお待ちください。
+      </p>
+
+      <section className="vote-card">
+        <div className="card-kicker"><span>VOTE</span><b>01</b></div>
+        <h3>勝手にアワード</h3>
+        <p>今回投票するテーマを選んでください。</p>
+        <fieldset disabled>
+          {choices.map((label, index) => (
+            <label key={label}>
+              <input type="radio" name="award" defaultChecked={index === 0} />
+              <span>{label}</span>
+              <b>準備中</b>
+            </label>
+          ))}
+        </fieldset>
+        <button type="button" disabled>投票受付は準備中</button>
+      </section>
+
+      <section className="comment-card">
+        <div className="card-kicker"><span>MESSAGE</span><b>02</b></div>
+        <h3>みんなへ、ひとこと</h3>
+        <form>
+          <label>
+            お名前・ニックネーム
+            <input disabled placeholder="例：3組 たなか" />
+          </label>
+          <label>
+            メッセージ
+            <textarea disabled placeholder="当日楽しみにしています！" />
+          </label>
+          <button type="button" disabled>コメント受付は準備中</button>
+        </form>
+      </section>
+    </div>
+  );
+}

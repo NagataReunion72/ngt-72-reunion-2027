@@ -1,3 +1,0 @@
-import {integer,sqliteTable,text,index,uniqueIndex} from 'drizzle-orm/sqlite-core';
-export const votes=sqliteTable('votes',{id:integer('id').primaryKey({autoIncrement:true}),voterId:text('voter_id').notNull(),choice:text('choice').notNull(),createdAt:text('created_at').notNull().default('CURRENT_TIMESTAMP')},t=>[uniqueIndex('idx_votes_voter_id').on(t.voterId),index('idx_votes_choice').on(t.choice)]);
-export const comments=sqliteTable('comments',{id:integer('id').primaryKey({autoIncrement:true}),name:text('name').notNull(),message:text('message').notNull(),createdAt:text('created_at').notNull().default('CURRENT_TIMESTAMP')},t=>[index('idx_comments_created_at').on(t.createdAt)]);
