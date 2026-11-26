@@ -288,3 +288,51 @@ body{background:#f2f1ed;color:#292925}
 .final-details .section-heading h2{font-size:clamp(36px,4.1vw,62px)}
 .plain-list p{font-weight:400}
 @media(max-width:640px){.hero h1{font-size:clamp(53px,12vw,78px);margin-bottom:46px}.section-heading h2{font-size:clamp(41px,11vw,64px)}.fact-card{min-height:180px}.schedule-row time{font-size:30px}.hero-bottom{gap:20px}}
+
+/* Light, softly textured editorial palette. */
+body{background:#f4f4f2;color:#30302e}
+.site-header,.hero,footer{background:#f4f4f2;color:#30302e}
+.site-header{border-bottom:1px solid #dededa}
+.site-header [data-slot=button]{color:#30302e;border-color:#c8c7c3}
+.site-header [data-slot=button]:hover{background:#e9e8e5}
+.header-actions{display:flex;align-items:center;gap:16px}
+.language-switch{display:flex;align-items:center;padding:3px;border:1px solid #deddda;border-radius:999px;background:#eae9e6}
+.language-switch [data-slot=button]{height:29px;min-width:68px;border:0!important;border-radius:999px;font-size:11px;letter-spacing:0;box-shadow:none!important}
+.language-switch [data-slot=button][aria-pressed=true]{background:#fffdfd;color:#292827;box-shadow:0 1px 4px #bbb9b240!important}
+.language-switch [data-slot=button][aria-pressed=false]{background:transparent}
+.site-header nav{font-size:12px;letter-spacing:.06em}
+.hero{background:#f4f4f2}
+.hero-topline,.hero-footer,.hero-overline{color:#71706b}
+.hero h1{color:#363633}
+.hero h1 span{color:#a7a6a2}
+.hero-bottom{border-top-color:#cac9c5}
+.hero-footer{border-top-color:#deddda}
+.hero-footer a{color:#30302e}
+.hero-bottom p:first-child{font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(16px,1.8vw,23px);letter-spacing:.01em}
+.content-section{background:#f4f4f2}
+.food,.final-details{background:#f0f0ed}
+.activities{background:#f4f4f2;color:#30302e}
+.activities .section-index{color:#666560}
+.fact-card,.activity-card,.participation-card{background:#eeedea!important;color:#30302e!important;border-color:#dfded9!important}
+.activity-card p{color:#777671}
+.activity-card{min-height:225px}
+.availability-alert{background:#f0efeb!important;border-color:#deddda!important}
+.section-index,.hero-overline,.card-head>span{color:#4f4b4b}
+.section-heading h2,.hero h1,.fact-card strong,.schedule-row h3,.activity-card h3,.participation-card h3{font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif}
+.language-ja .section-heading h2,.language-ja .hero h1,.language-ja .fact-card strong,.language-ja .schedule-row h3,.language-ja .activity-card h3,.language-ja .participation-card h3{letter-spacing:-.045em}
+.language-ja .hero h1{font-size:clamp(76px,12vw,190px);font-weight:500}
+.language-ja .hero h1 span{font-family:Georgia,serif;font-weight:400;margin-left:.06em}
+.language-ja .hero-bottom p:first-child{font-size:clamp(17px,2vw,25px)}
+.language-ja .food-line p,.language-ja .after-copy{line-height:1.8}
+.language-ja .schedule-row p,.language-ja .activity-card p,.language-ja .option-preview span,.language-ja .details-note{letter-spacing:.02em}
+.language-ja .section-heading p,.language-ja .participation-card>p{font-size:14px;letter-spacing:.01em}
+.marker{position:relative;display:inline-block;isolation:isolate;white-space:normal}
+.marker::after{content:"";position:absolute;z-index:-1;left:-.12em;right:-.16em;bottom:-.03em;height:70%;background:#efcfdb;opacity:.9;transform:rotate(-1.25deg);clip-path:polygon(0 15%,5% 10%,13% 13%,22% 7%,34% 12%,47% 5%,61% 10%,72% 4%,85% 10%,95% 6%,100% 12%,99% 93%,92% 88%,78% 95%,64% 90%,51% 97%,37% 91%,24% 96%,11% 90%,1% 96%)}
+.hero-overline .marker::after{height:64%;bottom:-.12em}
+.card-head .marker::after{height:60%}
+.participation-card>[data-slot=button]{background:#e7d9df;color:#51474d;border-color:#e2ced8}
+.participation-card>[data-slot=button]:disabled{opacity:.78}
+footer{border-top:1px solid #deddda}
+footer>span{color:#777671}
+@media(max-width:900px){.header-info{display:none!important}}
+@media(max-width:640px){.site-header{padding-inline:18px}.site-logo{font-size:16px}.language-switch [data-slot=button]{min-width:58px;font-size:10px;padding:0 8px}.hero{min-height:560px}.hero-main{padding:90px 0 110px}.language-ja .hero h1{font-size:clamp(50px,13vw,76px)}.language-en .hero h1{font-size:clamp(52px,12vw,76px)}.hero-bottom p:first-child{font-size:15px}.language-ja .hero-bottom p:first-child{font-size:17px}.hero-bottom p:last-child{font-size:12px}.marker::after{height:64%}}
