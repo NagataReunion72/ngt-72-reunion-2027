@@ -1,49 +1,16 @@
-'use client';
-
-const choices = [
-  'いちばん変わってなさそうな人',
-  'いちばん雰囲気が変わっていそうな人',
-  'いちばん遠くから来てくれそうな人',
-];
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 
 export default function InteractionPanel() {
-  return (
-    <div className="interaction-grid">
-      <p className="migration-banner" role="status">
-        投票・コメント機能は新しい公開環境へ移行準備中です。受付開始まで少しお待ちください。
-      </p>
-
-      <section className="vote-card">
-        <div className="card-kicker"><span>VOTE</span><b>01</b></div>
-        <h3>勝手にアワード</h3>
-        <p>今回投票するテーマを選んでください。</p>
-        <fieldset disabled>
-          {choices.map((label, index) => (
-            <label key={label}>
-              <input type="radio" name="award" defaultChecked={index === 0} />
-              <span>{label}</span>
-              <b>準備中</b>
-            </label>
-          ))}
-        </fieldset>
-        <button type="button" disabled>投票受付は準備中</button>
-      </section>
-
-      <section className="comment-card">
-        <div className="card-kicker"><span>MESSAGE</span><b>02</b></div>
-        <h3>みんなへ、ひとこと</h3>
-        <form>
-          <label>
-            お名前・ニックネーム
-            <input disabled placeholder="例：3組 たなか" />
-          </label>
-          <label>
-            メッセージ
-            <textarea disabled placeholder="当日楽しみにしています！" />
-          </label>
-          <button type="button" disabled>コメント受付は準備中</button>
-        </form>
-      </section>
+  return <div className="participation-content">
+    <Alert className="availability-alert" role="status"><AlertTitle>COMING SOON</AlertTitle><AlertDescription>VOTING AND COMMENTS ARE BEING PREPARED.</AlertDescription></Alert>
+    <div className="participation-grid">
+      <Card className="participation-card"><div className="card-head"><span>PEOPLE’S CHOICE</span><Badge variant="outline">NOT OPEN</Badge></div><h3>CAST YOUR VOTE</h3><p>CHOOSE A CATEGORY WHEN VOTING OPENS.</p><div className="option-preview"><span>MOST UNCHANGED</span><span>MOST TRANSFORMED</span><span>LONGEST JOURNEY</span></div><Button disabled>VOTING OPENS SOON</Button></Card>
+      <Card className="participation-card"><div className="card-head"><span>MESSAGE BOARD</span><Badge variant="outline">NOT OPEN</Badge></div><h3>LEAVE A MESSAGE</h3><p>NICKNAMES ARE WELCOME.</p><div className="field-preview"><label htmlFor="preview-name">NAME OR NICKNAME</label><Input id="preview-name" disabled placeholder="YOUR NAME" /><label htmlFor="preview-message">MESSAGE</label><Textarea id="preview-message" disabled placeholder="YOUR MESSAGE" /></div><Button disabled>COMMENTS OPEN SOON</Button></Card>
     </div>
-  );
+  </div>;
 }

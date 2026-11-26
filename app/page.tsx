@@ -1,17 +1,82 @@
 import InteractionPanel from './interaction-panel';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
 
-const schedule=[['17:30','受付スタート','名札を受け取って、まずは一杯。'],['18:00','開宴・乾杯','幹事よりご挨拶、集合写真も撮影します。'],['18:30','食事・歓談','テーブルを移動しながらゆっくり再会を。'],['19:20','みんなで余興','事前投票の結果発表と参加型ゲーム。'],['20:20','思い出スライド','あの頃の写真と、先生からのメッセージ。'],['20:45','締めの挨拶','二次会へ行く方はそのままご案内します。']];
-const menu=['季節の前菜盛り合わせ','温かいメインディッシュ','パスタ・軽食','デザートとコーヒー','ビール・ワイン・ソフトドリンク'];
-export default function Home(){return <main>
-  <header className="site-header"><a className="brand" href="#top" aria-label="同窓会ホーム"><span className="brand-mark">72</span><span>REUNION 2027</span></a><nav><a href="#info">ご案内</a><a href="#schedule">当日の流れ</a><a href="#activity">余興</a></nav><a className="nav-cta" href="#activity">余興に参加する</a></header>
-  <section className="hero" id="top"><div className="hero-copy"><p className="eyebrow">WE MEET AGAIN</p><h1>あの頃のつづきを、<br/><em>みんなで。</em></h1><p className="lead">卒業してから、それぞれの道へ。<br/>1月2日、懐かしい顔に会いにいこう。</p><div className="hero-actions"><a className="button primary" href="#info">当日のご案内</a><a className="button text-link" href="#activity">投票・コメントへ <span>↗</span></a></div></div><div className="date-art" aria-label="1月2日開催"><span className="date-label">JANUARY</span><strong>02</strong><span className="date-note">SAT / 2027</span><div className="seal">SAVE<br/>THE<br/>DATE</div></div><p className="scroll-note">SCROLL TO EXPLORE</p></section>
-  <section className="quick-facts" id="info" aria-label="開催概要"><div><span>DATE</span><strong>2027.01.02</strong><small>土曜日</small></div><div><span>TIME</span><strong>18:00–21:00</strong><small>17:30 受付開始</small></div><div><span>PLACE</span><strong>会場調整中</strong><small>決まり次第お知らせします</small></div><div><span>FEE</span><strong>調整中</strong><small>飲食代込み</small></div></section>
-  <section className="intro section-pad"><div><p className="eyebrow">WELCOME BACK</p><h2>久しぶり、が<br/><em>合言葉。</em></h2></div><div className="intro-text"><p>大人になった今だから話せることも、会えば一瞬で戻れる空気も。気負わず、いつもの自分で来てください。</p><p>詳細は決まり次第このページで更新します。ブックマークして、ときどき覗きに来てもらえるとうれしいです。</p><span className="update-tag">LAST UPDATE · 2026.11.22</span></div></section>
-  <section className="food section-pad"><div className="section-heading"><p className="eyebrow">FOOD & DRINK</p><h2>食べて、飲んで、<br/>ゆっくり話そう。</h2></div><div className="menu-card"><div className="menu-stamp">BUFFET<br/>& FREE<br/>DRINK</div><h3>ビュッフェスタイル</h3><p>立食と着席を織り交ぜた、自由に話せるスタイルを予定しています。</p><ul>{menu.map((item,i)=><li key={item}><span>0{i+1}</span>{item}</li>)}</ul><p className="fine-print">※ アレルギー・食事制限は事前に幹事までお知らせください。</p></div></section>
-  <section className="schedule section-pad" id="schedule"><div className="section-heading"><p className="eyebrow">TIMELINE</p><h2>当日の流れ</h2><p>時間は目安です。近況報告に夢中になって、少しくらい押してもご愛嬌。</p></div><div className="timeline">{schedule.map(([time,title,note],i)=><article key={time}><span className="step">0{i+1}</span><time>{time}</time><div><h3>{title}</h3><p>{note}</p></div></article>)}</div></section>
-  <section className="entertainment section-pad"><div className="section-heading light"><p className="eyebrow">ENTERTAINMENT</p><h2>主役は、<br/>みんなです。</h2><p>見るだけでも、参加しても楽しい余興を準備しています。</p></div><div className="program-grid"><article><span>01</span><h3>あの頃クイズ</h3><p>学校の出来事や先生の口癖など、記憶をたどるチーム対抗戦。</p></article><article><span>02</span><h3>勝手にアワード</h3><p>事前投票で選ぶ「変わってなさそうな人」などの結果発表。</p></article><article><span>03</span><h3>思い出スライド</h3><p>懐かしい写真とメッセージで、あの日々をもう一度。</p></article></div></section>
-  <section className="activity section-pad" id="activity"><div className="section-heading"><p className="eyebrow">JOIN THE FUN</p><h2>会う前から、<br/>同窓会は始まっている。</h2><p>投票はひとり1回。コメントはニックネームでも大丈夫です。</p></div><InteractionPanel/></section>
-  <section className="bring section-pad"><div><p className="eyebrow">WHAT TO BRING</p><h2>持ち物は、<br/>たったこれだけ。</h2></div><div className="bring-list"><article><span>01</span><div><h3>会費</h3><p>金額と支払方法は確定後にご案内します。</p></div></article><article><span>02</span><div><h3>スマートフォン</h3><p>当日の写真共有や余興への参加に使います。</p></div></article><article><span>03</span><div><h3>ちょっとの勇気</h3><p>久しぶりでも大丈夫。受付で幹事がお迎えします。</p></div></article></div></section>
-  <section className="after-party section-pad"><div className="after-number">02</div><div><p className="eyebrow">AFTER PARTY</p><h2>まだ話し足りない人へ。</h2><p>21:30頃から、会場近くのお店で二次会を予定しています。場所・費用・参加方法は後日このページでお知らせします。</p><span className="pill">DETAILS COMING SOON</span></div></section>
-  <footer><a className="brand" href="#top"><span className="brand-mark">72</span><span>REUNION 2027</span></a><p>また会える日を、楽しみに。</p><a href="#top">BACK TO TOP ↑</a></footer>
-  </main>}
+const schedule = [
+  ['17:30', 'DOORS OPEN', 'CHECK IN'],
+  ['18:00', 'OPENING & TOAST', 'GROUP PHOTO'],
+  ['18:30', 'DINNER', 'BUFFET & CONVERSATION'],
+  ['19:20', 'GROUP ACTIVITIES', 'QUIZ & AWARDS'],
+  ['20:20', 'MEMORY SLIDES', 'PHOTOS & MESSAGES'],
+  ['20:45', 'CLOSING', 'AFTER PARTY GUIDANCE'],
+];
+
+const activities = [
+  ['CLASS QUIZ', 'SCHOOL MEMORIES & TEAM QUESTIONS'],
+  ['PEOPLE’S CHOICE', 'PRE-EVENT VOTING & RESULTS'],
+  ['MEMORY SLIDES', 'PHOTOS & MESSAGES'],
+];
+
+function SectionHeading({ index, title, note }: { index: string; title: string; note?: string }) {
+  return <div className="section-heading"><span className="section-index">{index}</span><div><h2>{title}</h2>{note && <p>{note}</p>}</div></div>;
+}
+
+export default function Home() {
+  return <main id="top">
+    <header className="site-header">
+      <a className="site-logo" href="#top" aria-label="REUNION 72 HOME">N72<span> / </span>2027</a>
+      <nav aria-label="MAIN NAVIGATION"><a href="#details">DETAILS</a><a href="#program">PROGRAM</a><a href="#participate">PARTICIPATE</a></nav>
+      <Button variant="outline" size="sm" render={<a href="#details" />}>EVENT INFO</Button>
+    </header>
+
+    <section className="hero" aria-labelledby="hero-title">
+      <div className="hero-topline"><span>CLASS OF 72</span><span>REUNION / 2027</span></div>
+      <div className="hero-main"><p className="hero-overline">JANUARY 02 · SATURDAY</p><h1 id="hero-title">REUNION<span>72</span></h1><div className="hero-bottom"><p>THE CLASS GETS TOGETHER AGAIN.</p><p>2027.01.02<br/>18:00 — 21:00</p></div></div>
+      <div className="hero-footer"><span>EVENT INFORMATION</span><a href="#details">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section className="content-section details" id="details">
+      <SectionHeading index="01 / DETAILS" title="THE ESSENTIALS" />
+      <div className="facts-grid">
+        <Card className="fact-card"><span>DATE</span><strong>JAN 02, 2027</strong><small>SATURDAY</small></Card>
+        <Card className="fact-card"><span>TIME</span><strong>18:00 — 21:00</strong><small>DOORS OPEN AT 17:30</small></Card>
+        <Card className="fact-card"><span>VENUE</span><strong>TO BE ANNOUNCED</strong><small>LOCATION DETAILS TO FOLLOW</small></Card>
+        <Card className="fact-card"><span>FEE</span><strong>TO BE ANNOUNCED</strong><small>FOOD & DRINK INCLUDED</small></Card>
+      </div>
+      <p className="details-note">VENUE AND FEE WILL BE UPDATED HERE ONCE CONFIRMED.</p>
+    </section>
+
+    <section className="content-section food" id="food">
+      <SectionHeading index="02 / FOOD & DRINK" title="DINNER" note="BUFFET AND DRINKS PLANNED. DETAILS MAY CHANGE." />
+      <div className="food-line"><span>FOOD</span><p>APPETIZERS · MAIN DISHES · PASTA · DESSERT</p></div>
+      <Separator />
+      <div className="food-line"><span>DRINKS</span><p>BEER · WINE · SOFT DRINKS</p></div>
+      <Separator />
+      <div className="food-line"><span>DIETARY NEEDS</span><p>PLEASE CONTACT THE ORGANIZERS IN ADVANCE.</p></div>
+    </section>
+
+    <section className="content-section program" id="program">
+      <SectionHeading index="03 / PROGRAM" title="THE EVENING" note="TIMES ARE APPROXIMATE." />
+      <div className="schedule-list">{schedule.map(([time, title, detail]) => <div className="schedule-row" key={time}><time>{time}</time><h3>{title}</h3><p>{detail}</p></div>)}</div>
+    </section>
+
+    <section className="content-section activities" id="activities">
+      <SectionHeading index="04 / ACTIVITIES" title="WHAT’S ON" />
+      <div className="activity-list">{activities.map(([title, detail]) => <Card className="activity-card" key={title}><h3>{title}</h3><p>{detail}</p></Card>)}</div>
+    </section>
+
+    <section className="content-section participate" id="participate">
+      <SectionHeading index="05 / PARTICIPATE" title="VOTE & LEAVE A MESSAGE" note="VOTING AND COMMENTS WILL OPEN SOON." />
+      <InteractionPanel />
+    </section>
+
+    <section className="content-section final-details">
+      <div className="final-block"><SectionHeading index="06 / BRING" title="WHAT TO BRING" /><div className="plain-list"><p>EVENT FEE <span>AMOUNT & PAYMENT METHOD TO FOLLOW</span></p><p>SMARTPHONE <span>FOR PHOTOS & ACTIVITIES</span></p></div></div>
+      <div className="final-block"><SectionHeading index="07 / AFTER PARTY" title="ROUND TWO" /><p className="after-copy">PLANNED FOR AROUND 21:30 NEAR THE MAIN VENUE. LOCATION, FEE AND HOW TO JOIN WILL BE ANNOUNCED HERE.</p><Badge variant="outline" size="lg">DETAILS TO FOLLOW</Badge></div>
+    </section>
+
+    <footer><a className="site-logo" href="#top">N72<span> / </span>2027</a><span>LAST UPDATED · NOV 27, 2026</span><a href="#top">BACK TO TOP ↑</a></footer>
+  </main>;
+}
