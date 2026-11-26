@@ -336,3 +336,16 @@ footer{border-top:1px solid #deddda}
 footer>span{color:#777671}
 @media(max-width:900px){.header-info{display:none!important}}
 @media(max-width:640px){.site-header{padding-inline:18px}.site-logo{font-size:16px}.language-switch [data-slot=button]{min-width:58px;font-size:10px;padding:0 8px}.hero{min-height:560px}.hero-main{padding:90px 0 110px}.language-ja .hero h1{font-size:clamp(50px,13vw,76px)}.language-en .hero h1{font-size:clamp(52px,12vw,76px)}.hero-bottom p:first-child{font-size:15px}.language-ja .hero-bottom p:first-child{font-size:17px}.hero-bottom p:last-child{font-size:12px}.marker::after{height:64%}}
+
+/* Kaisei Tokumin keeps Japanese and Latin numerals on one typographic baseline. */
+.language-ja{font-family:"Kaisei Tokumin","Yu Mincho",serif;font-weight:400}
+.language-ja .hero h1,.language-ja .hero h1 span,.language-ja .section-heading h2,.language-ja .fact-card strong,.language-ja .schedule-row time,.language-ja .schedule-row h3,.language-ja .activity-card h3,.language-ja .participation-card h3,.language-ja .hero-bottom p:first-child,.language-ja .food-line p,.language-ja .after-copy,.language-ja .plain-list p{font-family:"Kaisei Tokumin","Yu Mincho",serif}
+.language-ja .hero h1,.language-ja .hero h1 span{font-weight:500;line-height:1;letter-spacing:-.055em;font-variant-numeric:lining-nums}
+.language-ja .hero h1 span{font-size:1em;margin-left:0;vertical-align:baseline}
+.language-ja .section-heading h2,.language-ja .activity-card h3,.language-ja .participation-card h3{font-weight:500}
+.language-ja .fact-card strong,.language-ja .schedule-row time,.language-ja .hero-bottom p:last-child{font-variant-numeric:lining-nums tabular-nums}
+.language-ja .schedule-row time{letter-spacing:0;line-height:1.2}
+.language-ja .fact-card strong{line-height:1.35}
+.language-ja .hero-bottom p:last-child{font-family:"Kaisei Tokumin",serif;line-height:1.5}
+.language-ja .hero-overline,.language-ja .hero-topline,.language-ja .hero-footer,.language-ja .section-index,.language-ja .fact-card>span,.language-ja .fact-card>small,.language-ja .details-note,.language-ja .food-line span,.language-ja .schedule-row p,.language-ja .activity-card p,.language-ja .card-head,.language-ja .option-preview span,.language-ja .field-preview label,.language-ja .plain-list span{font-family:"Kaisei Tokumin","Yu Mincho",serif;letter-spacing:.015em}
+@media(max-width:640px){.language-ja .hero h1{font-size:clamp(48px,12.5vw,75px)}}
