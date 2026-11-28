@@ -359,3 +359,30 @@ footer>span{color:#777671}
 .fact-card-bottom a:hover{color:#2f2d2e;border-color:currentColor}
 .language-ja .fact-card-long strong{font-size:clamp(20px,1.9vw,28px);line-height:1.45}
 @media(max-width:640px){.fact-card:nth-child(3){grid-column:auto}.fact-card-long{min-height:200px}.fact-card-long strong,.language-ja .fact-card-long strong{font-size:22px}}
+
+/* A calmer type scale: readable supporting text and slightly quieter display text. */
+.site-header nav,.language-switch [data-slot=button],.hero-topline,.hero-footer,.hero-overline,.section-index,.fact-card>span,.fact-card>small,.details-note,.food-line span,.schedule-row p,.activity-card p,.card-head,.plain-list span,.field-preview label,footer{font-size:14px}
+.section-heading p,.participation-card>p,.option-preview span,.fact-card-bottom small,.fact-card-bottom a,.availability-alert [data-slot=alert-description]{font-size:15px}
+.language-ja .section-heading p,.language-ja .participation-card>p,.availability-alert [data-slot=alert-title]{font-size:16px}
+.card-head [data-slot=badge]{font-size:13px}
+.hero h1{font-size:clamp(71px,10.9vw,175px)}
+.language-ja .hero h1{font-size:clamp(75px,11.9vw,189px)}
+.section-heading h2{font-size:clamp(41px,6.1vw,89px)}
+.fact-card strong{font-size:clamp(23px,2.4vw,36px)}
+.fact-card-long strong{font-size:clamp(17px,1.7vw,26px)}
+.language-ja .fact-card-long strong{font-size:clamp(19px,1.8vw,27px)}
+.schedule-row time{font-size:clamp(31px,4.4vw,59px)}
+.schedule-row h3{font-size:clamp(18px,2.3vw,35px)}
+.activity-card h3{font-size:clamp(21px,2.4vw,37px)}
+.participation-card h3{font-size:clamp(25px,2.9vw,41px)}
+.final-details .section-heading h2{font-size:clamp(35px,4vw,61px)}
+@media(max-width:640px){
+  .site-header nav,.language-switch [data-slot=button]{font-size:13px}
+  .hero-topline,.hero-footer,.schedule-row p{font-size:13px}
+  .hero h1,.language-en .hero h1{font-size:clamp(51px,11.9vw,75px)}
+  .language-ja .hero h1{font-size:clamp(47px,12.4vw,74px)}
+  .section-heading h2{font-size:clamp(40px,10.9vw,63px)}
+  .schedule-row time{font-size:29px}
+  .schedule-row h3{font-size:18px}
+  .fact-card-long strong,.language-ja .fact-card-long strong{font-size:21px}
+}
