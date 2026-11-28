@@ -335,7 +335,7 @@ footer>span{color:#777671}
 @media(max-width:640px){.site-header{padding-inline:18px}.site-logo{font-size:16px}.hero{min-height:560px}.hero-main{padding:90px 0 110px}.language-ja .hero h1{font-size:clamp(50px,13vw,76px)}.language-en .hero h1{font-size:clamp(52px,12vw,76px)}.hero-bottom p:first-child{font-size:15px}.language-ja .hero-bottom p:first-child{font-size:17px}.hero-bottom p:last-child{font-size:12px}.marker::after{height:64%}}
 
 /* Kaisei Tokumin anchors titles and labels; Japanese explanations use a clean sans serif. */
-.language-ja{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;font-weight:400}
+.language-ja{--font-ja-gothic:"Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;font-family:var(--font-ja-gothic);font-weight:400}
 .language-ja .site-logo,.language-ja .hero h1,.language-ja .hero h1 span,.language-ja .section-heading h2,.language-ja .fact-card strong,.language-ja .schedule-row time,.language-ja .schedule-row h3,.language-ja .activity-card h3,.language-ja .participation-card h3,.language-ja .hero-bottom p:first-child,.language-ja .plain-list p{font-family:"Kaisei Tokumin","Yu Mincho",serif}
 .language-ja .hero h1,.language-ja .hero h1 span{font-weight:500;line-height:1;letter-spacing:-.055em;font-variant-numeric:lining-nums}
 .language-ja .hero h1 span{font-size:1em;margin-left:0;vertical-align:baseline}
@@ -345,7 +345,8 @@ footer>span{color:#777671}
 .language-ja .fact-card strong{line-height:1.35}
 .language-ja .hero-bottom p:last-child{font-family:"Kaisei Tokumin",serif;line-height:1.5}
 .language-ja .hero-overline,.language-ja .section-index,.language-ja .fact-card>span,.language-ja .fact-card>small,.language-ja .food-line span,.language-ja .card-head>span{font-family:"Kaisei Tokumin","Yu Mincho",serif;letter-spacing:.015em}
-.language-ja .section-heading p,.language-ja .fact-card-bottom small,.language-ja .fact-card-bottom a,.language-ja .food-line p,.language-ja .schedule-row p,.language-ja .activity-card p,.language-ja .participation-card>p,.language-ja .availability-alert,.language-ja .option-preview span,.language-ja .field-preview label,.language-ja .plain-list span,.language-ja footer>span{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;letter-spacing:.015em}
+.language-ja .site-header nav,.language-ja .header-info,.language-ja .language-switch [data-slot=select-trigger],.language-ja .hero-topline,.language-ja .hero-footer,.language-ja .section-heading p,.language-ja .fact-card-bottom small,.language-ja .fact-card-bottom a,.language-ja .food-line p,.language-ja .schedule-row p,.language-ja .activity-card p,.language-ja .participation-card>p,.language-ja .availability-alert,.language-ja .card-head [data-slot=badge],.language-ja .option-preview span,.language-ja .field-preview label,.language-ja .field-preview input,.language-ja .field-preview textarea,.language-ja .plain-list span,.language-ja footer>span,.language-ja footer>a:not(.site-logo),.language-ja .participation-card>[data-slot=button]{font-family:var(--font-ja-gothic);letter-spacing:.015em}
+.language-ja .section-heading p,.language-ja .fact-card-bottom small,.language-ja .fact-card-bottom a,.language-ja .food-line p,.language-ja .participation-card>p,.language-ja .availability-alert [data-slot=alert-description],.language-ja .plain-list span{font-weight:500}
 @media(max-width:640px){.language-ja .hero h1{font-size:clamp(48px,12.5vw,75px)}}
 
 .fact-card:nth-child(3){grid-column:span 2}
