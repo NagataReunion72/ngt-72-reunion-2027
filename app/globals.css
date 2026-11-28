@@ -378,6 +378,9 @@ footer>span{color:#777671}
 .activity-card h3{font-size:clamp(21px,2.2vw,32px)}
 .participation-card h3{font-size:clamp(24px,2.6vw,35px)}
 .final-details .section-heading h2{font-size:clamp(34px,3.7vw,54px)}
+.activity-card-pending{grid-column:1/-1;min-height:180px}
+.fact-card-fee .fact-card-bottom small{white-space:pre-line}
+.final-details-single{grid-template-columns:minmax(0,920px)}
 @media(max-width:640px){
   .site-header nav,.language-switch [data-slot=button],.hero-topline,.hero-footer,.schedule-row p{font-size:14px}
   .hero h1,.language-en .hero h1{font-size:clamp(43px,11.3vw,63px)}
@@ -389,4 +392,5 @@ footer>span{color:#777671}
   .schedule-row time{font-size:27px}
   .schedule-row h3{font-size:18px}
   .fact-card-long strong,.language-ja .fact-card-long strong{font-size:21px}
+  .language-en .fact-card:nth-child(3) strong{font-size:19px}
 }
