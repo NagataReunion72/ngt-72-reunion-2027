@@ -397,3 +397,44 @@ footer>span{color:#777671}
 .language-fr .hero h1{font-size:clamp(55px,8vw,120px);letter-spacing:-.065em}
 .language-zh .hero h1,.language-zh .section-heading h2,.language-zh .fact-card strong,.language-zh .schedule-row h3,.language-zh .activity-card h3,.language-zh .participation-card h3{font-family:"Songti SC","Noto Serif CJK SC",serif}
 @media(max-width:640px){.language-fr .hero h1{font-size:clamp(31px,8.6vw,44px)}}
+
+/* Keep generous breathing room around content without leaving empty panels. */
+.hero{min-height:min(540px,calc(100svh - 72px));padding-top:24px;padding-bottom:20px}
+.hero-main{padding:48px 0 58px}
+.hero-overline{margin-bottom:16px}
+.hero h1{margin-bottom:38px}
+.hero-bottom{padding-top:16px}
+.hero-footer{padding-top:14px}
+.content-section{padding-block:52px}
+.section-heading{margin-bottom:32px}
+.section-heading p{margin-top:10px}
+.facts-grid,.activity-list{gap:12px}
+.fact-card{min-height:170px;padding:24px}
+.food-line{padding-block:16px}
+.schedule-row{padding-block:18px}
+.activity-card.activity-card-pending{min-height:125px;padding:22px;justify-content:center;gap:10px}
+.participation-content{gap:12px}
+.availability-alert{padding:16px!important}
+.participation-grid{gap:12px;align-items:start}
+.participation-card{min-height:0;padding:24px}
+.participation-card h3{margin:18px 0 6px}
+.option-preview{margin:16px 0}
+.option-preview span{padding-block:10px}
+.field-preview{margin:16px 0;gap:6px}
+.field-preview label{margin-top:4px}
+.field-preview [data-slot=textarea-control] textarea{min-height:64px}
+.final-details .section-index{margin-bottom:14px}
+.plain-list p{padding-block:13px}
+footer{padding-block:22px}
+@media(max-width:640px){
+  .hero{min-height:440px;padding-top:20px;padding-bottom:18px}
+  .hero-main{padding:50px 0 56px}
+  .hero h1{margin-bottom:28px}
+  .content-section{padding-block:38px}
+  .section-heading{margin-bottom:24px}
+  .section-index{margin-bottom:12px}
+  .fact-card{min-height:155px;padding:22px}
+  .fact-card-long{min-height:170px}
+  .activity-card.activity-card-pending{min-height:120px}
+  .participation-card{padding:22px}
+}
