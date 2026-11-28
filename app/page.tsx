@@ -14,33 +14,33 @@ const content = {
     nav: ['開催概要', '当日の流れ', '参加'], info: '開催情報', class: '72回生', reunion: '同窓会 / 2027', dateLine: '1月2日・土曜日', hero: '同窓会', heroNote: '72回生、ふたたび。', scroll: '詳細を見る',
     sections: ['開催概要', '食事・飲み物', '当日の流れ', '余興', '参加', '持ち物', '二次会'],
     headings: ['開催概要', '食事について', '当日の流れ', '余興の予定', '投票・コメント', '持ち物', '二次会'],
-    facts: [['日付', '2027年1月2日', '土曜日'], ['時間', '18:00 — 21:00', '受付開始 17:30'], ['会場', '調整中', '決まり次第お知らせします'], ['会費', '調整中', '飲食代込み']],
-    detailsNote: '会場と会費は確定後、このページでお知らせします。',
-    foodNote: 'ビュッフェと飲み物を予定しています。内容は変更になる場合があります。',
-    food: [['料理', '前菜・メイン・パスタ・デザート'], ['飲み物', 'ビール・ワイン・ソフトドリンク'], ['食事制限', 'アレルギーなどは事前に幹事へご連絡ください。']],
-    scheduleNote: '時刻は目安です。',
-    schedule: [['17:30', '受付開始', '受付・名札のお渡し'], ['18:00', '開宴・乾杯', '集合写真'], ['18:30', '食事・歓談', 'ビュッフェ'], ['19:20', '余興', 'クイズ・アワード'], ['20:20', '思い出スライド', '写真・メッセージ'], ['20:45', '締めの挨拶', '二次会のご案内']],
+    facts: [['日付', '2027年1月2日', '土曜日'], ['時間', '17:00 — 19:30', '16:30 開場'], ['会場', '神戸マリオットホテル ザ マーカススクエア神戸', ''], ['参加費用', '調整中', '確定後にご案内'], ['形式', '立食ブッフェ形式', '一部着席あり'], ['参加対象', '72回生 ＋ 先生方', ''], ['服装', 'フォーマル または\nオフィスカジュアル', 'ジャケット推奨 ※パンツスタイル可']],
+    mapLabel: '地図を見る', detailsNote: '参加費用は確定後、このページでお知らせします。',
+    foodNote: '立食ブッフェ形式（一部着席あり）です。',
+    food: [['形式', '立食ブッフェ形式（一部着席あり）'], ['料理・飲み物', '詳細は後日お知らせします。']],
+    scheduleNote: '詳細な進行は調整中です。',
+    schedule: [['16:30', '開場', '受付開始'], ['17:00', '開宴', '同窓会スタート'], ['19:30', '閉宴', '終了予定']],
     activities: [['あの頃クイズ', '学校の思い出をテーマにしたチーム対抗戦'], ['みんなで選ぶアワード', '事前投票と結果発表'], ['思い出スライド', '懐かしい写真とメッセージ']],
     participateNote: '投票・コメントは準備中です。',
     bring: [['会費', '金額・支払方法は後日ご案内'], ['スマートフォン', '写真共有・余興への参加に']],
-    after: '21:30頃から、一次会の会場近くで予定しています。場所・費用・参加方法は後日、このページでお知らせします。',
-    afterBadge: '詳細は後日', updated: '最終更新 · 2026年11月27日', top: 'ページ先頭へ ↑',
+    after: '時間・場所・費用・参加方法は、決まり次第このページでお知らせします。',
+    afterBadge: '詳細は後日', updated: '最終更新 · 2026年11月28日', top: 'ページ先頭へ ↑',
   },
   en: {
     nav: ['DETAILS', 'PROGRAM', 'PARTICIPATE'], info: 'EVENT INFO', class: 'CLASS OF 72', reunion: 'REUNION / 2027', dateLine: 'JANUARY 02 · SATURDAY', hero: 'REUNION', heroNote: 'THE CLASS GETS TOGETHER AGAIN.', scroll: 'EXPLORE DETAILS',
     sections: ['DETAILS', 'FOOD & DRINK', 'PROGRAM', 'ACTIVITIES', 'PARTICIPATE', 'BRING', 'AFTER PARTY'],
     headings: ['THE ESSENTIALS', 'DINNER', 'THE EVENING', 'WHAT’S ON', 'VOTE & LEAVE A MESSAGE', 'WHAT TO BRING', 'ROUND TWO'],
-    facts: [['DATE', 'JAN 02, 2027', 'SATURDAY'], ['TIME', '18:00 — 21:00', 'DOORS OPEN AT 17:30'], ['VENUE', 'TO BE ANNOUNCED', 'LOCATION DETAILS TO FOLLOW'], ['FEE', 'TO BE ANNOUNCED', 'FOOD & DRINK INCLUDED']],
-    detailsNote: 'VENUE AND FEE WILL BE UPDATED HERE ONCE CONFIRMED.',
-    foodNote: 'BUFFET AND DRINKS PLANNED. DETAILS MAY CHANGE.',
-    food: [['FOOD', 'APPETIZERS · MAIN DISHES · PASTA · DESSERT'], ['DRINKS', 'BEER · WINE · SOFT DRINKS'], ['DIETARY NEEDS', 'PLEASE CONTACT THE ORGANIZERS IN ADVANCE.']],
-    scheduleNote: 'TIMES ARE APPROXIMATE.',
-    schedule: [['17:30', 'DOORS OPEN', 'CHECK IN'], ['18:00', 'OPENING & TOAST', 'GROUP PHOTO'], ['18:30', 'DINNER', 'BUFFET & CONVERSATION'], ['19:20', 'GROUP ACTIVITIES', 'QUIZ & AWARDS'], ['20:20', 'MEMORY SLIDES', 'PHOTOS & MESSAGES'], ['20:45', 'CLOSING', 'AFTER PARTY GUIDANCE']],
+    facts: [['DATE', 'JAN 02, 2027', 'SATURDAY'], ['TIME', '17:00 — 19:30', 'DOORS OPEN AT 16:30'], ['VENUE', 'KOBE MARRIOTT HOTEL · THE MARCUS SQUARE KOBE', ''], ['FEE', 'TO BE ANNOUNCED', 'DETAILS TO FOLLOW'], ['FORMAT', 'STANDING BUFFET', 'SOME SEATING AVAILABLE'], ['GUESTS', 'CLASS OF 72 + TEACHERS', ''], ['DRESS CODE', 'FORMAL OR OFFICE CASUAL', 'JACKET RECOMMENDED · TROUSERS WELCOME']],
+    mapLabel: 'VIEW MAP', detailsNote: 'THE FEE WILL BE UPDATED HERE ONCE CONFIRMED.',
+    foodNote: 'STANDING BUFFET WITH SOME SEATING AVAILABLE.',
+    food: [['FORMAT', 'STANDING BUFFET · SOME SEATING AVAILABLE'], ['FOOD & DRINKS', 'DETAILS TO FOLLOW.']],
+    scheduleNote: 'THE DETAILED PROGRAM IS BEING FINALIZED.',
+    schedule: [['16:30', 'DOORS OPEN', 'CHECK IN'], ['17:00', 'REUNION BEGINS', 'EVENT START'], ['19:30', 'EVENT ENDS', 'SCHEDULED CLOSE']],
     activities: [['CLASS QUIZ', 'SCHOOL MEMORIES & TEAM QUESTIONS'], ['PEOPLE’S CHOICE', 'PRE-EVENT VOTING & RESULTS'], ['MEMORY SLIDES', 'PHOTOS & MESSAGES']],
     participateNote: 'VOTING AND COMMENTS WILL OPEN SOON.',
     bring: [['EVENT FEE', 'AMOUNT & PAYMENT METHOD TO FOLLOW'], ['SMARTPHONE', 'FOR PHOTOS & ACTIVITIES']],
-    after: 'PLANNED FOR AROUND 21:30 NEAR THE MAIN VENUE. LOCATION, FEE AND HOW TO JOIN WILL BE ANNOUNCED HERE.',
-    afterBadge: 'DETAILS TO FOLLOW', updated: 'LAST UPDATED · NOV 27, 2026', top: 'BACK TO TOP ↑',
+    after: 'TIME, LOCATION, FEE AND HOW TO JOIN WILL BE ANNOUNCED HERE WHEN CONFIRMED.',
+    afterBadge: 'DETAILS TO FOLLOW', updated: 'LAST UPDATED · NOV 28, 2026', top: 'BACK TO TOP ↑',
   },
 } as const;
 
@@ -64,11 +64,11 @@ export default function Home() {
 
     <section className="hero" aria-labelledby="hero-title">
       <div className="hero-topline"><span>{t.class}</span><span>{t.reunion}</span></div>
-      <div className="hero-main"><p className="hero-overline"><span className="marker">{t.dateLine}</span></p><h1 id="hero-title">{t.hero}<span>72</span></h1><div className="hero-bottom"><p><span className="marker">{t.heroNote}</span></p><p>2027.01.02<br/>18:00 — 21:00</p></div></div>
+      <div className="hero-main"><p className="hero-overline"><span className="marker">{t.dateLine}</span></p><h1 id="hero-title">{t.hero}<span>72</span></h1><div className="hero-bottom"><p><span className="marker">{t.heroNote}</span></p><p>2027.01.02<br/>17:00 — 19:30</p></div></div>
       <div className="hero-footer"><span>{t.info}</span><a href="#details">{t.scroll} <span aria-hidden="true">↓</span></a></div>
     </section>
 
-    <section className="content-section details" id="details"><SectionHeading index={1} label={t.sections[0]} title={t.headings[0]} /><div className="facts-grid">{t.facts.map(([label, value, note]) => <Card className="fact-card" key={label}><span>{label}</span><strong>{value}</strong><small>{note}</small></Card>)}</div><p className="details-note">{t.detailsNote}</p></section>
+    <section className="content-section details" id="details"><SectionHeading index={1} label={t.sections[0]} title={t.headings[0]} /><div className="facts-grid">{t.facts.map(([label, value, note], index) => <Card className={`fact-card ${[2, 4, 5, 6].includes(index) ? 'fact-card-long' : ''}`} key={label}><span>{label}</span><strong>{value}</strong><div className="fact-card-bottom">{note && <small>{note}</small>}{index === 2 && <a href="https://maps.app.goo.gl/1ch62dZE3XBeUPub7" target="_blank" rel="noopener noreferrer">{t.mapLabel} ↗</a>}</div></Card>)}</div><p className="details-note">{t.detailsNote}</p></section>
 
     <section className="content-section food" id="food"><SectionHeading index={2} label={t.sections[1]} title={t.headings[1]} note={t.foodNote} />{t.food.map(([label, value], i) => <div key={label}><div className="food-line"><span>{label}</span><p>{value}</p></div>{i < t.food.length - 1 && <Separator />}</div>)}</section>
 
