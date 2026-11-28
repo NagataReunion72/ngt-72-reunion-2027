@@ -297,9 +297,6 @@ body{background:#f4f4f2;color:#30302e}
 .site-header [data-slot=button]:hover{background:#e9e8e5}
 .header-actions{display:flex;align-items:center;gap:16px}
 .language-switch{display:flex;align-items:center;padding:3px;border:1px solid #deddda;border-radius:999px;background:#eae9e6}
-.language-switch [data-slot=button]{height:29px;min-width:68px;border:0!important;border-radius:999px;font-size:11px;letter-spacing:0;box-shadow:none!important}
-.language-switch [data-slot=button][aria-pressed=true]{background:#fffdfd;color:#292827;box-shadow:0 1px 4px #bbb9b240!important}
-.language-switch [data-slot=button][aria-pressed=false]{background:transparent}
 .site-header nav{font-size:12px;letter-spacing:.06em}
 .hero{background:#f4f4f2}
 .hero-topline,.hero-footer,.hero-overline{color:#71706b}
@@ -335,7 +332,7 @@ body{background:#f4f4f2;color:#30302e}
 footer{border-top:1px solid #deddda}
 footer>span{color:#777671}
 @media(max-width:900px){.header-info{display:none!important}}
-@media(max-width:640px){.site-header{padding-inline:18px}.site-logo{font-size:16px}.language-switch [data-slot=button]{min-width:58px;font-size:10px;padding:0 8px}.hero{min-height:560px}.hero-main{padding:90px 0 110px}.language-ja .hero h1{font-size:clamp(50px,13vw,76px)}.language-en .hero h1{font-size:clamp(52px,12vw,76px)}.hero-bottom p:first-child{font-size:15px}.language-ja .hero-bottom p:first-child{font-size:17px}.hero-bottom p:last-child{font-size:12px}.marker::after{height:64%}}
+@media(max-width:640px){.site-header{padding-inline:18px}.site-logo{font-size:16px}.hero{min-height:560px}.hero-main{padding:90px 0 110px}.language-ja .hero h1{font-size:clamp(50px,13vw,76px)}.language-en .hero h1{font-size:clamp(52px,12vw,76px)}.hero-bottom p:first-child{font-size:15px}.language-ja .hero-bottom p:first-child{font-size:17px}.hero-bottom p:last-child{font-size:12px}.marker::after{height:64%}}
 
 /* Kaisei Tokumin keeps Japanese and Latin numerals on one typographic baseline. */
 .language-ja{font-family:"Kaisei Tokumin","Yu Mincho",serif;font-weight:400}
@@ -362,7 +359,6 @@ footer>span{color:#777671}
 
 /* Keep supporting details readable without letting display text dominate. */
 .site-header nav,.hero-topline,.hero-footer,.hero-overline,.section-index,.fact-card>span,.fact-card>small,.details-note,.food-line span,.schedule-row p,.activity-card p,.card-head,.plain-list span,.field-preview label,footer{font-size:16px}
-.language-switch [data-slot=button]{font-size:15px}
 .section-heading p,.participation-card>p,.option-preview span,.fact-card-bottom small,.fact-card-bottom a,.availability-alert [data-slot=alert-description],.after-copy{font-size:17px}
 .language-ja .section-heading p,.language-ja .participation-card>p,.availability-alert [data-slot=alert-title]{font-size:17px}
 .card-head [data-slot=badge]{font-size:15px}
@@ -382,7 +378,7 @@ footer>span{color:#777671}
 .fact-card-fee .fact-card-bottom small{white-space:pre-line}
 .final-details-single{grid-template-columns:minmax(0,920px)}
 @media(max-width:640px){
-  .site-header nav,.language-switch [data-slot=button],.hero-topline,.hero-footer,.schedule-row p{font-size:14px}
+  .site-header nav,.hero-topline,.hero-footer,.schedule-row p{font-size:14px}
   .hero h1,.language-en .hero h1{font-size:clamp(43px,11.3vw,63px)}
   .language-ja .hero h1{font-size:clamp(42px,11.5vw,62px)}
   .hero-bottom{gap:12px}
@@ -394,3 +390,9 @@ footer>span{color:#777671}
   .fact-card-long strong,.language-ja .fact-card-long strong{font-size:21px}
   .language-en .fact-card:nth-child(3) strong{font-size:19px}
 }
+
+.language-switch [data-slot=select-trigger]{width:144px;min-width:0;height:35px;border:0;border-radius:999px;background:#fffdfd;box-shadow:0 1px 4px #bbb9b240;font-size:14px;padding-inline:12px}
+.language-switch [data-slot=select-trigger]:focus-visible{outline:2px solid #9b8791;outline-offset:2px}
+.language-fr .hero h1{font-size:clamp(55px,8vw,120px);letter-spacing:-.065em}
+.language-zh .hero h1,.language-zh .section-heading h2,.language-zh .fact-card strong,.language-zh .schedule-row h3,.language-zh .activity-card h3,.language-zh .participation-card h3{font-family:"Songti SC","Noto Serif CJK SC",serif}
+@media(max-width:640px){.language-fr .hero h1{font-size:clamp(31px,8.6vw,44px)}}
